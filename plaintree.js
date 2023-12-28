@@ -1,7 +1,7 @@
 class PlainTree {
 
     constructor(container, options) {
-        this.container = document.querySelector(container);
+        this.container = typeof container === 'string' ? document.querySelector(container) : container;
         this.options = Object.assign({
             data: [], depth: 0, onLoaded: null, onNodeClick: null,
         }, options);
